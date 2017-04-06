@@ -42,7 +42,16 @@
     $("#ID0").text("What");
 
     $.ajax({
-      url: "http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC",
+      url: "https://opentdb.com/api.php?amount=50",
+      type: "GET",
+      success: function(response) {
+        console.log(response);
+      }
+    });
+
+
+    $.ajax({
+      url: "https://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC",
       type: "GET",
       success: function(response) {
         console.log(response);
